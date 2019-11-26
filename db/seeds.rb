@@ -1,4 +1,4 @@
-Category.find_or_create_by(name:"life")
-Category.find_or_create_by(name:"hobby")
-Category.find_or_create_by(name:"other")
-Category.find_or_create_by(name:"work")
+Category.find_or_create_by(name:"生活")
+Category.find_or_create_by(name:"趣味")
+Category.find_or_create_by(name:"仕事")
+Category.find_or_create_by(name:"その他")
