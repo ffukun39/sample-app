@@ -1,16 +1,16 @@
 <div class="container">
-  <h3>Create memo</h3>
+  <h3>メモの新規作成</h3>
   <%= form_tag("/create") do %>
     <div class="form-group">
-      <%=label_tag"form-title", "Title" %>
-      <%= text_field :memos, :title, id:"form-title", class:"form-control" ,placeholder:"title"%>
+      <%=label_tag"form-title", "タイトル" %>
+      <%= text_field :memos, :title, id:"form-title", class:"form-control" ,placeholder:"タイトル"%>
     </div>
     <div class="form-group">
-      <%=label_tag"form-content", "Content" %>
-      <%= text_field :memos, :body, id:"form-content", class:"form-control",placeholder:"content"%>
+      <%=label_tag"form-content", "本文" %>
+      <%= text_field :memos, :body, id:"form-content", class:"form-control",placeholder:"本文"%>
     </div>
     <%= select_tag 'memos[category_id', options_from_collection_for_select(@categories, :id, :name ,) %>
-    <%= submit_tag"Create", class:"btn btn-primary"%>
+    <%= submit_tag"作成", class:"btn btn-primary"%>
 
   <%end%>
 
