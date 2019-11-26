@@ -2,6 +2,7 @@ class MemosController < ApplicationController
   def index
     #topページが呼ばれたときに動作するアクション
     @memos = Memo.all
+    @categories = Category.all
   end
 
   def new
@@ -25,10 +26,11 @@ class MemosController < ApplicationController
 
   def edit
     @memo = Memo.find(params["id"])
+    @categories = Category.all
   end
 
   def update
-    @memo = Memo.find(params["id"])
+    memo = Memo.find(params["id"])
     memo.title = params["memos"]["title"]
     memo.title = params["memos"]["title"]
     memo.save
