@@ -36,11 +36,9 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">カテゴリ <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">仕事</a></li>
-            <li><a href="#">趣味</a>></li>
-            <li><a href="#">生活</a></li>
-            <li><a href="#">その他</a></li>
-          </ul>
+            <%= @categories.each do |category| %>
+            <li><a href="#"><%= category.name%></a></li>
+           <% end %>
         </li>
       </ul>
     </div><!-- /.navbar-collapse -->
