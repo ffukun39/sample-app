@@ -37,7 +37,7 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">カテゴリ <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <% @categories.each do |category| %>
-            <li><a href="#"><%= category.name%></a></li>
+            <li><a href="/categories/<%= category.id %>"><%= category.name%></a></li>
            <% end %>
         </li>
       </ul>
