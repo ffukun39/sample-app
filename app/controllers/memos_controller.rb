@@ -2,7 +2,7 @@ class MemosController < ApplicationController
   def index
     #topページが呼ばれたときに動作するアクション
     @memos = Memo.all
-    @categories = Category.all
+
   end
 
   def new
