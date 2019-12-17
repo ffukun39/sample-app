@@ -9,6 +9,7 @@ class MemosController < ApplicationController
     #新規作成ページが呼ばれたときに動作するアクション
     @categories = Category.all
   end
+protect_from_forgery :except => [:create]
 
   def create
     #新しいメモがpostされたときに動作するアクション
